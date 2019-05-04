@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 mpl.style.use('seaborn')
 
-BUDGET = 1000
+BUDGET = 500
 
 if __name__=="__main__":
     # Initialize benchmark function object
