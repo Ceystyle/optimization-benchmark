@@ -10,8 +10,9 @@ env:
   matrix:
     secure: XzgoP/XcXvP3JckYZxo4RDfpdVXTRJgfV9EhHWX+t/PHDNd5GQhdocjhCl63clS39OXQD+N/GvP1IFAx0AhWiyrjPUMDVESGzFI2yw56skmOgt9oGZT1sHZ7nfMQLviJ29LZdG9gLkMJW5/0tMUos5MgIn24Qxkp7CJn7LedDiiavRO9a8MkSZfIhDvEa7/8pJS7BrmmJlAwW9CldZ7gkCtqBS1+qDR8v8+/SY56L9VpCrEdG2iSieTZ5Ckqs/R309rtZCe96W01HKFuGaZAkKLz1DK67BoSLCX88kXfqvucEBWzr7uXxleIWnxm3GzNjQ2W2TZgoFbe35gAiAl10cCsJmC0hl4zcYwIhXsdSmmFiqxrwElS9iUPRLbKl6EGJtLZc/qUlykIZGJg2zNXLbeM11i6SthzU7vPQB3l7dQ3K+5AWJ1I+4nV/x0dQPXPRPCve0KspCOkY0NZCNCkG8VRZF7b5A+xQn/mz6M+ptNEH1q+4UDnOJ84BbUnuRX+eB/jFCVh3xoXl1Tw+Jxro8UfwWJh+B3KLLLdgK4cCaSi91Wcr6WI/XYykhGpzmnRK6UBYzi824lNnUVMrHq2qCXWnO8VHpe8zt7CgEHxnGfJ0ZIdrGUHErnpfTsciyLd2p3riW+VL1f8IpLujENS7W40WQUcMn7Px9S1aOU9W8Y=
 deploy:
-  provider: releases
-  api_key: $GITHUB_TOKEN
-  file_glob: true
-  file: "*.png"
+  provider: pages
   skip_cleanup: true
+  github_token: $GITHUB_TOKEN
+  keep_history: true
+  on:
+branch: master
