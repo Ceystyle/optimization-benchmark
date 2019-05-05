@@ -1,10 +1,10 @@
 language: python
 python:
-- '3.5'
+- '3.7'
 install:
 - pip install numpy matplotlib
 script:
-- python performance.pys
+- python performance.py
 - ls
 deploy:
   provider: pages
