@@ -10,4 +10,18 @@ class StupidGradientDescent:
         self.fgrad = fgrad
 
     def step(self):
-        self.state -= self.alpha * self.fgrad(self.state[0], self.state[1])
+        self.state -= self.alpha * self.fgrad(self.state)
+
+class MomentumGradientDescent:
+
+    def __init__(self, alpha, gamma, initstate, fgrad):
+        self.state = initstate
+        self.alpha = alpha
+        self.gamma = gamma
+        self.v = np.zeros((len(initstate),))
+        self.fgrad = fgrad
+
+    def step(self):
+        self.v *= self.gamma*self.v
+        self.v += self.alpha*self.fgrad(self.state)
+        self.state -= self.v
