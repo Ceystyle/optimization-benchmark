@@ -25,3 +25,18 @@ class MomentumGradientDescent:
         self.v *= self.gamma*self.v
         self.v += self.alpha*self.fgrad(self.state)
         self.state -= self.v
+
+
+class NesterovGradientDescent:
+
+    def __init__(self, alpha, gamma, initstate, fgrad):
+        self.state = initstate
+        self.alpha = alpha
+        self.gamma = gamma
+        self.v = np.zeros((len(initstate),))
+        self.fgrad = fgrad
+
+    def step(self):
+        self.v *= self.gamma*self.v
+        self.v += self.alpha*self.fgrad(self.state - self.gamma * self.v)
+        self.state -= self.v
