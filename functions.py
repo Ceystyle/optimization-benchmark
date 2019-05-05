@@ -4,7 +4,7 @@ import numpy as np
 
 class Rosenbrock:
 
-    def __init__(self, dim=2, b=100.):
+    def __init__(self, dim=2, b=4.):
         self.dim = dim
         self.b = b
         self.a = 1.
