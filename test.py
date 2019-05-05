@@ -6,7 +6,7 @@ import matplotlib.pyplot as plt
 import matplotlib as mpl
 mpl.style.use('seaborn')
 
-BUDGET = 500
+BUDGET = 1000
 
 if __name__=="__main__":
     # Initialize benchmark function object
@@ -24,7 +24,8 @@ if __name__=="__main__":
         # Take a gradient step with constant alpha
         gd.step()
         # Save f value
-        performance[i] = fr.eval(gd.state[0], gd.state[1])
+        print(gd.state)
+        performance[i] = fr.eval(gd.state)
 
     plt.plot(np.log10(performance), 'bo')
     plt.savefig("rosenbrock.png", dpi=200)
