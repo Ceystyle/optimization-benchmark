@@ -4,7 +4,7 @@ python:
 install:
 - pip install numpy matplotlib
 script:
-- python test.py
+- python performance.pys
 - ls
 deploy:
   provider: pages
